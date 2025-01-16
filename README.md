@@ -1,2 +1,2 @@
 # ReactStudy
-あああ
+React勉強用リポジトリ
