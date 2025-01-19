@@ -38,6 +38,7 @@ function App() {
     if (!nextUrl) return;
     setLoading(true);
     let data = await getAllPokemon(nextUrl);
+    console.log('data', data);
     await loadPokemon(data.results);
     setNextUrl(data.next);
     setPrevUrl(data.previous);
@@ -54,26 +55,22 @@ function App() {
   };
 
   return (
-    <>
-      <Navbar />
-      <div className="App">
-        {loading ? (
-          <h1>ロード中...</h1>
-          ) : (
-          <>
-            <div className="pokemonCardContainer">
-              {pokemonData.map((pokemon, i) => {
-                return <Card key={i} pokemon={pokemon} />
-              })}
-            </div>
-            <div className='btn'>
-              <button onClick={handlePrevPage}>前へ</button>
-              <button onClick={handleNextPage}>次へ</button>
-            </div>
-          </>
-          )}
-      </div>
-    </>
+    <div className="App">
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <p>
+          Edit <code>src/App.js</code> and save to reload.
+        </p>
+        <a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Learn React
+        </a>
+      </header>
+    </div>
   );
 }
 
