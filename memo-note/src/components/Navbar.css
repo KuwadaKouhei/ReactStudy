@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&display=swap');
+
+.navbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar .title {
+  color: white;
+  font-family: "M PLUS Rounded 1c", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.btn {
+  background-color: #f8f9fa;
+  color: #495057;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  box-shadow: 0px 0px 15px -5px #777777;
+  border-radius: 10px;
+  margin-right: 30px;
+  transition: all 0.3s;
+}
+
+.btn:hover {
+  background-color: rgb(226, 220, 220);
+  transform: scale(1.05);
+}
